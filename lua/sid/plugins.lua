@@ -11,8 +11,8 @@ return require('packer').startup({
 		-- Packer :love: packer
 		use 'wbthomason/packer.nvim'
 
-		-- theme
-		use 'NLKNguyen/papercolor-theme'
+		-- papercolor
+		use 'fcpg/vim-fahrenheit'
 
 		-- treesitter
 		use {
