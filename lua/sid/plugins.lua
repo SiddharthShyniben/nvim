@@ -69,6 +69,7 @@ return require('packer').startup({
 		-- misc
 		use 'jiangmiao/auto-pairs'
 		use 'github/copilot.vim'
+		use 'yuttie/comfortable-motion.vim'
 
 		if packer_bootstrap then
 			require('packer').sync()
