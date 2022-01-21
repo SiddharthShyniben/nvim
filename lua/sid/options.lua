@@ -1,6 +1,6 @@
 local function set(x)
 	vim.cmd('set ' .. x)
-end 
+end
 
 set 'tabstop=4'
 set 'shiftwidth=4'
@@ -17,3 +17,6 @@ set 'nowrap'
 set 'mouse=a'
 set 'formatoptions-=ro'
 set 'completeopt=menu,menuone,noselect'
+set 'ignorecase smartcase'
+set 'nomodeline'
+set 'splitbelow splitright'
