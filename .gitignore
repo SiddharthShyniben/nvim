@@ -1,2 +1,4 @@
 undo/**
 *.sw*
+plugins/
+plugin/
