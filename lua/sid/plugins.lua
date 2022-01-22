@@ -1,7 +1,8 @@
 local fn = vim.fn
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local packerBootstrap = false
 if fn.empty(fn.glob(install_path)) > 0 then
-	packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+	packerBootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
 vim.cmd [[packadd packer.nvim]]
@@ -11,8 +12,8 @@ return require('packer').startup({
 		-- Packer :love: packer
 		use 'wbthomason/packer.nvim'
 
-		-- papercolor
-		use 'fcpg/vim-fahrenheit'
+		-- theme
+		use 'sjl/badwolf'
 
 		-- treesitter
 		use {
@@ -22,6 +23,7 @@ return require('packer').startup({
 		use 'nvim-treesitter/nvim-treesitter-textobjects'
 		use 'nvim-treesitter/playground'
 		use 'nvim-treesitter/nvim-treesitter-refactor'
+		use 'nvim-treesitter/nvim-treesitter-angular'
 
 		-- Better file types
 		use 'pangloss/vim-javascript'
@@ -42,6 +44,7 @@ return require('packer').startup({
 		use 'PhilRunninger/nerdtree-visual-selection'
 		use 'Xuyuanp/nerdtree-git-plugin'
 		use 'voldikss/vim-floaterm'
+		use 'folke/trouble.nvim'
 
 		-- tpope :heart:
 		use 'tpope/vim-surround'
@@ -70,8 +73,10 @@ return require('packer').startup({
 		use 'jiangmiao/auto-pairs'
 		use 'github/copilot.vim'
 		use 'yuttie/comfortable-motion.vim'
+		use 'ellisonleao/glow.nvim'
+		use 'mattn/emmet-vim'
 
-		if packer_bootstrap then
+		if packerBootstrap then
 			require('packer').sync()
 		end
 	end,

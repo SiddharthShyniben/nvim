@@ -1,0 +1,4 @@
+# My nvim config
+
+## Plugins
+
