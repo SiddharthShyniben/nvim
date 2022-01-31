@@ -13,7 +13,8 @@ return require('packer').startup({
 		use 'wbthomason/packer.nvim'
 
 		-- theme
-		use 'sjl/badwolf'
+		use 'ayu-theme/ayu-vim'
+		use 'Shatur/neovim-ayu'
 
 		-- treesitter
 		use {
@@ -32,6 +33,7 @@ return require('packer').startup({
 
 		-- UI
 		use 'ryanoasis/vim-devicons'
+		use {'lukas-reineke/virt-column.nvim', config = function() require 'virt-column' .setup() end}
 		use 'itchyny/lightline.vim'
 		use {
 			'junegunn/fzf',
@@ -45,6 +47,8 @@ return require('packer').startup({
 		use 'Xuyuanp/nerdtree-git-plugin'
 		use 'voldikss/vim-floaterm'
 		use 'folke/trouble.nvim'
+		use 'metakirby5/codi.vim'
+		use 'wfxr/minimap.vim'
 
 		-- tpope :heart:
 		use 'tpope/vim-surround'
@@ -75,6 +79,7 @@ return require('packer').startup({
 		use 'yuttie/comfortable-motion.vim'
 		use 'ellisonleao/glow.nvim'
 		use 'mattn/emmet-vim'
+		use 'wakatime/vim-wakatime'
 
 		if packerBootstrap then
 			require('packer').sync()
