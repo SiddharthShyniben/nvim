@@ -1,3 +1,3 @@
 vim.g.lightline = {
-	colorscheme = 'PaperColor',
+	colorscheme = 'ayu',
 }
