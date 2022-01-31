@@ -33,7 +33,7 @@ nmap('d*', '*``dgn')
 nmap('d#', '#``dgN')
 
 -- Fast edit vimrc
-nmap('<leader>', ':tabe ~/.config/nvim<CR>')
+nmap('<leader>fv', ':Files ~/.config/nvim<CR>')
 nmap('<leader>p', ':tabe ~/.config/nvim/lua/sid/plugins.lua<CR>')
 nmap('<leader>k', ':tabe ~/.config/nvim/lua/sid/keymaps.lua<CR>')
 nmap('<leader>o', ':tabe ~/.config/nvim/lua/sid/options.lua<CR>')
@@ -43,7 +43,7 @@ nmap('<leader>ft', ':FloatermNew<CR>')
 nmap('yt', ':FloatermToggle<CR>')
 
 -- NERDTree
-nmap('<CR>', ':NERDTreeFocus<CR>')
+nmap('<leader><leader>', ':NERDTreeFocus<CR>')
 
 -- Smooth scroll
 nmap('<C-d>', ':call comfortable_motion#flick(100)<CR>')
