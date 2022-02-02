@@ -81,6 +81,18 @@ return require('packer').startup({
 		use 'mattn/emmet-vim'
 		use 'wakatime/vim-wakatime'
 
+		-- writing
+		use 'preservim/vim-pencil'
+		use 'preservim/vim-lexical'
+		use 'preservim/vim-litecorrect'
+		use 'junegunn/goyo.vim'
+		use 'junegunn/limelight.vim'
+		use 'kana/vim-textobj-user'
+		use 'preservim/vim-textobj-quote'
+		use 'preservim/vim-textobj-sentence'
+		use 'preservim/vim-wordy'
+		use 'dbmrq/vim-ditto'
+
 		if packerBootstrap then
 			require('packer').sync()
 		end
