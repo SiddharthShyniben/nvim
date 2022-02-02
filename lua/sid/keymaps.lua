@@ -9,6 +9,7 @@ end
 local imap = makeMap 'i'
 local nmap = makeMap 'n'
 local tmap = makeMap 't'
+local xmap = makeMap 'x'
 local map = makeMap ''
 
 nmap('<space>', '')
@@ -16,9 +17,9 @@ vim.g.mapleader = ' '
 
 -- Escape!
 imap('jk', '<esc>')
-tmap('kj', '<esc>') -- Different because conflicts with vim mode zsh
+tmap('<C-w><C-w>', '<C-\\><C-n>')
 
--- Find studd
+-- Find stuff
 nmap('<leader>ff', ':Files<CR>')
 nmap('<leader>fb', ':Buffers<CR>')
 nmap('<leader>fg', ':Rg<CR>')
@@ -53,7 +54,5 @@ nmap('<C-b>', ':call comfortable_motion#flick(-200)<CR>')
 map('<ScrollWheelDown>', ':call comfortable_motion#flick(40)<CR>')
 map('<ScrollWheelUp>', '  :call comfortable_motion#flick(-40)<CR>')
 
--- Tabs
-nmap('<leader>t', ':tabnew<CR>')
-nmap('L', ':tabnext<CR>')
-nmap('H', ':tabprevious<CR>')
+-- Copilot
+keymap('i', '<C-c>', '<esc>:call copilot#Accept()<cr>i', {noremap = true, silent = true, script = true, nowait = true})

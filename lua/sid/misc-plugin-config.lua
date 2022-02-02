@@ -20,3 +20,4 @@ vim.g.comfortable_motion_scroll_down_key = 'j'
 vim.g.comfortable_motion_scroll_up_key = 'k'
 
 vim.g.copilot_filetypes = {['*'] = true}
+vim.g.copilot_no_tab_map = true
