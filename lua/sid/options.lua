@@ -24,4 +24,9 @@ set 'scrolloff=999'
 set 'colorcolumn=80'
 set 'textwidth=80'
 set 'termguicolors'
-set 'fillchars=eob:\\ '
+set 'fillchars=eob:'
+set 'nohidden' -- way too much confusion. when i am a better vimmer i might use this
+set 'writebackup' -- i have a habit of messing up stuff and not having it in vcs
+set 'smarttab'
+set 'showtabline=1'
+set 'errorbells'
