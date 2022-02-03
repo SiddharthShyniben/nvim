@@ -2,3 +2,6 @@ undo/**
 *.sw*
 plugins/
 plugin/
+Ditto/
+spell/
+
