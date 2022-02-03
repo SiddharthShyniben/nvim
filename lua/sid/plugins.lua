@@ -49,6 +49,7 @@ return require('packer').startup({
 		use 'folke/trouble.nvim'
 		use 'metakirby5/codi.vim'
 		use 'wfxr/minimap.vim'
+		use {'SiddharthShyniben/preview.nvim', config = function() require('preview').init() end}
 
 		-- tpope :heart:
 		use 'tpope/vim-surround'
@@ -82,13 +83,11 @@ return require('packer').startup({
 		use 'wakatime/vim-wakatime'
 
 		-- writing
-		use 'preservim/vim-pencil'
 		use 'preservim/vim-lexical'
 		use 'preservim/vim-litecorrect'
 		use 'junegunn/goyo.vim'
 		use 'junegunn/limelight.vim'
 		use 'kana/vim-textobj-user'
-		use 'preservim/vim-textobj-quote'
 		use 'preservim/vim-textobj-sentence'
 		use 'preservim/vim-wordy'
 		use 'dbmrq/vim-ditto'
