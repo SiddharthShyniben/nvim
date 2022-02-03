@@ -16,6 +16,7 @@ set 'undodir=~/.config/nvim/undo'
 set 'undolevels=1000'
 
 set 'foldlevelstart=99'
+set 'foldtext=gitgutter#fold#foldtext()'
 set 'scrolloff=999'
 set 'conceallevel=2'
 
