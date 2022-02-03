@@ -2,13 +2,10 @@
 
 vim.api.nvim_exec([[
 	function! Prose()
-		echom 'Prose'
-		call pencil#init()
 		call lexical#init()
 		call litecorrect#init()
-		call textobj#quote#init()
 		call textobj#sentence#init()
-		execute DittoOn
+		execute ':DittoOn'
 
 		" manual reformatting shortcuts
 		nnoremap <buffer> <silent> Q gqap
@@ -18,12 +15,6 @@ vim.api.nvim_exec([[
 		" force top correction on most recent misspelling
 		nnoremap <buffer> <c-s> [s1z=<c-o>
 		inoremap <buffer> <c-s> <c-g>u<Esc>[s1z=`]A<c-g>u
-
-		" replace common punctuation
-		iabbrev <buffer> -- –
-		iabbrev <buffer> --- —
-		iabbrev <buffer> << «
-		iabbrev <buffer> >> »
 
 		" open most folds
 		setlocal foldlevel=6
@@ -35,7 +26,6 @@ vim.api.nvim_exec([[
 		" highlight words (reedes/vim-wordy)
 		noremap <silent> <buffer> <leader>w :<C-u>NextWordy<cr>
 		xnoremap <silent> <buffer> <leader>w :<C-u>NextWordy<cr>
-		inoremap <silent> <buffer> <leader>w <C-o>:NextWordy<cr>
 	endfunction
 
 	" automatically initialize buffer by file type
