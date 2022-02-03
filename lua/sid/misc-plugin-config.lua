@@ -21,5 +21,9 @@ vim.g.comfortable_motion_scroll_up_key = 'k'
 
 vim.g.copilot_filetypes = {['*'] = true}
 vim.g.copilot_no_tab_map = true
+vim.cmd[[let g:airline#extensions#tabline#enabled = 1]]
 
-require('preview').init()
+local ok, preview = pcall(require, 'preview')
+if not ok then return end
+
+preview.init()

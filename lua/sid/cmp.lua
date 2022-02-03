@@ -1,5 +1,13 @@
-local cmp = require 'cmp'
-local luasnip = require 'luasnip'
+-- error checks
+local ok_1, cmp = pcall(require, 'cmp')
+if not ok_1 then
+	return
+end
+
+local ok_2, luasnip = pcall(require, 'luasnip')
+if not ok_2 then
+	return
+end
 
 local check_backspace = function()
 	local col = vim.fn.col '.' - 1
