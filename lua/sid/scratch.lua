@@ -1,0 +1,2 @@
+-- This file is for quickly adding options
+-- Without having tp worry about putting it in the right file and sourcing it.
