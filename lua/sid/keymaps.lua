@@ -54,7 +54,6 @@ nmap('<C-b>', ':call comfortable_motion#flick(-200)<CR>')
 map('<ScrollWheelDown>', ':call comfortable_motion#flick(40)<CR>')
 map('<ScrollWheelUp>', '  :call comfortable_motion#flick(-40)<CR>')
 
--- Copilot
 -- keymap('i', '<C-c>', '<esc>:call copilot#Accept()<cr>i', {noremap = true, silent = true, script = true, nowait = true})
 -- for some reason only viml works
 vim.cmd[[
