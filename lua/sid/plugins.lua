@@ -7,7 +7,10 @@ end
 
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup({
+local ok, packer = pcall(require, 'packer')
+if not ok then return end
+
+return packer.startup({
 	function (use)
 		-- Packer :love: packer
 		use 'wbthomason/packer.nvim'
@@ -50,7 +53,8 @@ return require('packer').startup({
 		use 'folke/trouble.nvim'
 		use 'metakirby5/codi.vim'
 		use 'wfxr/minimap.vim'
-		use {'SiddharthShyniben/preview.nvim', config = function() require('preview').init() end}
+		use 'airblade/vim-gitgutter'
+		-- use {'SiddharthShyniben/preview.nvim', config = function() require('preview').init() end}
 
 		-- tpope :heart:
 		use 'tpope/vim-surround'
