@@ -15,9 +15,11 @@ vim.g.javascript_conceal_arrow_function       = '⇒'
 vim.g.javascript_conceal_noarg_arrow_function = '🞅'
 vim.g.javascript_conceal_underscore_arrow_function = '🞅'
 
-vim.g.markdown_fenced_languages = {'html', 'css', 'js=javascript', 'jsx=javascript', 'ts=typescript', 'tsx=typescript', 'json', 'yaml', 'toml', 'xml'}
+vim.g.markdown_fenced_languages = {'html', 'css', 'js=javascript', 'jsx=javascript', 'ts=typescript', 'tsx=typescript', 'json', 'yaml', 'toml', 'xml', 'lua'}
 vim.g.comfortable_motion_scroll_down_key = 'j'
 vim.g.comfortable_motion_scroll_up_key = 'k'
 
 vim.g.copilot_filetypes = {['*'] = true}
 vim.g.copilot_no_tab_map = true
+
+require('preview').init()
