@@ -42,6 +42,7 @@ set 'laststatus=2'
 
 set 'termguicolors'
 
+set 'nohidden' -- :prayge:
 set 'writebackup' -- i have a habit of messing up stuff and not having it in vcs
 
 set 'errorbells'
