@@ -34,7 +34,8 @@ return require('packer').startup({
 		-- UI
 		use 'ryanoasis/vim-devicons'
 		use {'lukas-reineke/virt-column.nvim', config = function() require 'virt-column' .setup() end}
-		use 'itchyny/lightline.vim'
+		-- use 'itchyny/lightline.vim'
+		use 'vim-airline/vim-airline'
 		use {
 			'junegunn/fzf',
 			run = function()
