@@ -23,7 +23,7 @@ set 'nowrap'
 set 'mouse=a'
 
 set 'formatoptions-=ro'
-set 'formatoptions+=2nja'
+set 'formatoptions+=2nj'
 
 set 'completeopt=menu,menuone,noselect'
 
