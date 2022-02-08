@@ -21,6 +21,11 @@ vim.g.comfortable_motion_scroll_up_key = 'k'
 
 vim.g.copilot_filetypes = {['*'] = true}
 vim.g.copilot_no_tab_map = true
+
+vim.g.dashboard_default_executive = 'fzf'
+
+vim.g.tokyonight_style = 'night'
+
 vim.cmd[[let g:airline#extensions#tabline#enabled = 1]]
 
 local ok, preview = pcall(require, 'preview')

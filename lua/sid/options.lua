@@ -50,15 +50,13 @@ set 'errorbells'
 
 set 'signcolumn=yes'
 
-set 'list listchars=multispace:,lead:,trail:,precedes:ﲖ,extends:ﲕ,tab:>--,eol:¬'
+set 'list listchars=multispace:,lead:,trail:,precedes:ﲖ,extends:ﲕ,tab:-->,eol:¬'
 set 'fillchars=eob:'
 
 set 'cursorline cursorlineopt=both'
 set 'cursorcolumn'
 
 set 'winminheight=0 winminwidth=0'
-
-set 'scrollbind cursorbind'
 
 set 'title'
 set 'noruler'
