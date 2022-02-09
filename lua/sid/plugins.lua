@@ -35,13 +35,24 @@ return packer.startup({
 		use 'kyazdani42/nvim-web-devicons'
 		use {'lukas-reineke/virt-column.nvim', config = function() require 'virt-column' .setup() end}
 		use {
-			'junegunn/fzf',
-			run = function()
-				vim.api.nvim_call_function('fzf#install')
-			end
+			'nvim-telescope/telescope.nvim',
+			requires = {{'nvim-lua/plenary.nvim'}}
 		}
-		use 'junegunn/fzf.vim'
 		use 'airblade/vim-gitgutter'
+		use {'nvim-lualine/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true}}
+		use {'lukas-reineke/indent-blankline.nvim', config = function()
+			require("indent_blankline").setup {
+				show_current_context = true,
+				show_current_context_start = true,
+			}
+		end}
+
+		-- coq + lsps
+		use 'neovim/nvim-lspconfig'
+		use 'williamboman/nvim-lsp-installer'
+		use {'ms-jpq/coq_nvim', branch = 'coq'}
+		use {'ms-jpq/coq.artifacts', branch = 'artifacts'}
+		use {'ms-jpq/coq.thirdparty', branch = '3p'}
 
 		-- tpope :heart:
 		use 'tpope/vim-surround'
@@ -60,6 +71,7 @@ return packer.startup({
 		use 'mattn/emmet-vim'
 		use 'wakatime/vim-wakatime'
 		use 'christoomey/vim-tmux-navigator'
+		use 'justinmk/vim-sneak'
 
 		if packerBootstrap then
 			require('packer').sync()
