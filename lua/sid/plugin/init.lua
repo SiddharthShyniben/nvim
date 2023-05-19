@@ -1,0 +1,1 @@
+require 'sid.plugin.setup'
