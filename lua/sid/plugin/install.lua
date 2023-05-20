@@ -63,9 +63,18 @@ require('lazy').setup({
 			end,
 			dependencies = {
 				'nvim-tree/nvim-web-devicons',
-				'nvim-treesitter/nvim-treesitter'
+				{'nvim-treesitter/nvim-treesitter', dependencies = {
+					'nvim-treesitter/nvim-treesitter-textobjects'
+				}}
 			}
 		},
 		{'ray-x/lsp_signature.nvim', config = function() require 'lsp_signature'.setup() end},
+
+		{
+			'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+			config = function()
+				require('lsp_lines').setup()
+			end,
+		}
 	}},
 }, {install = {colorscheme = {'habamax'}}})
