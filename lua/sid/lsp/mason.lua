@@ -6,7 +6,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 -- TODO: HTML, CSS, JS, Rust, Node.js, Angular, Svelte, tsserver
 local servers = {
 	-- brew install lua-language-server
-	lua_ls = require 'lua.sid.lsp.configs.lua'
+	lua_ls = require 'lua.sid.lsp.configs.lua',
 }
 
 local function on_attach(client, bufnr)
@@ -35,3 +35,9 @@ mason_lspconfig.setup_handlers {
 		}
 	end,
 }
+
+require('typescript').setup({
+    server = {
+        on_attach = on_attach,
+    },
+})

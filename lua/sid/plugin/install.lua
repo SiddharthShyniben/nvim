@@ -42,6 +42,7 @@ require('lazy').setup({
 		}},
 
 		'folke/neodev.nvim',
+		'jose-elias-alvarez/typescript.nvim',
 
 		-- UI
 		{'j-hui/fidget.nvim', config = function() require'fidget'.setup({text = {spinner = 'meter'}}) end},
