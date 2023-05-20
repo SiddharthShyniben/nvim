@@ -1,0 +1,20 @@
+{
+    "workspace.library": [
+        "/Users/user/.config/nvim",
+        "/Users/user/.local/share/nvim/lazy/lazy.nvim",
+        "/Users/user/.local/share/nvim/lazy/vim-sleuth",
+        "/Users/user/.local/share/nvim/lazy/vim-speeddating",
+        "/Users/user/.local/share/nvim/lazy/nvim-lspconfig",
+        "/Users/user/.local/share/nvim/lazy/vim-repeat",
+        "/Users/user/.local/share/nvim/lazy/mason.nvim",
+        "/Users/user/.local/share/nvim/lazy/vim-sensible",
+        "/Users/user/.local/share/nvim/lazy/vim-fugitive",
+        "/Users/user/.local/share/nvim/lazy/vim-surround",
+        "/Users/user/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/Users/user/.local/share/nvim/lazy/tokyonight.nvim",
+        "/usr/local/Cellar/neovim/HEAD-fbee2e4/share/nvim/runtime",
+        "/usr/local/Cellar/neovim/HEAD-fbee2e4/share/nvim/runtime/pack/dist/opt/matchit",
+        "/Users/user/.local/state/nvim/lazy/readme",
+        "${3rd}/luassert/library"
+    ]
+}

@@ -20,5 +20,8 @@ require('lazy').setup({
 		build = ':MasonUpdate'
 	},
 	'williamboman/mason-lspconfig.nvim',
-	'neovim/nvim-lspconfig'
+	'neovim/nvim-lspconfig',
+
+	-- UI
+	{'j-hui/fidget.nvim', config = function() require'fidget'.setup({text = {spinner = 'meter'}}) end}
 })

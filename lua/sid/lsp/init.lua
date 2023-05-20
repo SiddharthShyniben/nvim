@@ -1,0 +1,1 @@
+require 'sid.lsp.mason'
