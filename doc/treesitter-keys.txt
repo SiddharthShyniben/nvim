@@ -1,0 +1,50 @@
+*treesitter-keys.lua* Keymaps for treesitter
+
+Mappings:
+	<C-Space>                             *CTRL-Space*
+		Incrementally select nodes. Press repeatedly to increase selection
+	<C-S>                                 *CTRL-S*
+		Incrementally select scopes
+	<C-D>                                 *CTRL-D*
+		Decrement selection
+
+	<motion>aa                            *ts-aa*
+		Select outer parameter
+	<motion>ia                            *ts-ia*
+		Select inner parameter
+
+	<motion>af                            *ts-af*
+		Select outer function
+	<motion>if                            *ts-if*
+		Select inner function
+
+	<motion>ac                            *ts-ac*
+		Select outer class
+	<motion>ic                            *ts-ic*
+		Select inner class
+
+	]m                                    *ts-]m*
+		Jump to the start of the next function
+	]]                                    *ts-]]*
+		Jump to the start of the next class
+		
+	]M                                    *ts-]M*
+		Jump to the end of the next function
+	][                                    *ts-][*
+		Jump to the end of the next class
+		
+	[m                                    *ts-[m*
+		Jump to the start of the previous function
+	[[                                    *ts-[[*
+		Jump to the start of the previous class
+		
+	[M                                    *ts-[M*
+		Jump to the end of the previous function
+	[]                                    *ts-[]*
+		Jump to the end of the previous class
+	
+	<leader>a                             *leader-a*
+		Swap parameter with the next
+
+	<leader>A                             *leader-A*
+		Swap parameter with the previous

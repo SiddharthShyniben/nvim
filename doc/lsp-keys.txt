@@ -1,44 +1,44 @@
 *lsp-keys.txt* Keyboard shortcuts defined for LSP actions
 
 Mappings:
-	gh
+	gh                                    *gh*
 		Find symbol definition
 	
-	<leader>ca
+	<leader>ca                            *leader-ca*
 		Code action
 
-	gr
+	gr                                    *gr*
 		Rename symbol in whole project
 
-	glr
+	glr                                   *glr*
 		Rename symbol only in current file
 
-	gp
+	gp                                    *gp*
 		Peek
 
-	gd
+	gd                                    *gd*
 		Go to definition
 
-	gt
+	gt                                    *gt*
 		Peek type definition
 
-	gtg
+	gtg                                   *gtg*
 		Goto type definition
 
-	<leader>s(l/b/w/c)
+	<leader>s(l/b/w/c)                    *leader-s*
 		Show line/buffer/workspace/cursor diagnostics
 	
-	[e
+	[e                                    *[e*
 		Go to previous diagnostic
 
-	]e
+	]e                                    *]e*
 		Go to next diagnostic
 
 	<leader>o
 		Show outline
 	
-	K
+	K                                    *lsp-K*
 		Show hover documentation
 
-	gK
+	gK                                    *gK*
 		Persistent hover documentation

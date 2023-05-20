@@ -8,11 +8,6 @@ local function set(x)
 	end
 end
 
--- TODO: move
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
 set 'number relativenumber'
 
 set 'wrapscan'
