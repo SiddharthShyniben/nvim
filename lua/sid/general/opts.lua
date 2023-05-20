@@ -16,6 +16,7 @@ set 'ignorecase smartcase'
 set 'scrolloff=999 sidescrolloff=999'
 set 'nowrap'
 set 'conceallevel=2'
+set 'cursorline cursorlineopt=number'
 
 set 'termguicolors'
 
