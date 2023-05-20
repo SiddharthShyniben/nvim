@@ -45,7 +45,26 @@ require('lazy').setup({
 
 		-- UI
 		{'j-hui/fidget.nvim', config = function() require'fidget'.setup({text = {spinner = 'meter'}}) end},
-		'nvimdev/lspsaga.nvim',
+
+		{
+			'nvimdev/lspsaga.nvim',
+			event = 'LspAttach',
+			config = function()
+				require('lspsaga').setup({
+					ui = {
+						code_action = '»',
+						beacon = {
+							enable = true,
+							frequency = 7,
+						},
+					}
+				})
+			end,
+			dependencies = {
+				'nvim-tree/nvim-web-devicons',
+				'nvim-treesitter/nvim-treesitter'
+			}
+		},
 		{'ray-x/lsp_signature.nvim', config = function() require 'lsp_signature'.setup() end},
 	}},
-}, {})
+}, {install = {colorscheme = {'habamax'}}})

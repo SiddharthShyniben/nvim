@@ -6,29 +6,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 -- TODO: HTML, CSS, JS, Rust, Node.js, Angular, Svelte, tsserver
 local servers = {
 	-- brew install lua-language-server
-	lua_ls = {
-		Lua = {
-			runtime = {
-				version = 'LuaJIT',
-			},
-			diagnostics = {
-				globals = {'vim'},
-			},
-			workspace = {
-				library = vim.api.nvim_get_runtime_file('', true),
-				checkThirdParty = false -- TODO fix
-			},
-			telemetry = {
-				enable = false,
-			},
-			experimental = {
-				ghost_text = true,
-			},
-			completion = {
-				callSnippet = 'Replace'
-			}
-		},
-	}
+	lua_ls = require 'lua.sid.lsp.configs.lua'
 }
 
 local function on_attach(client, bufnr)
