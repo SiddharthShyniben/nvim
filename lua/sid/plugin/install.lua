@@ -17,6 +17,7 @@ require('lazy').setup({
 	{'ggandor/leap.nvim', config = function() require('leap').add_default_mappings() end},
 	{'chrisgrieser/nvim-spider', lazy = true},
 	'notomo/gesture.nvim',
+	{'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup {} end},
 
 	-- LSP
 	{'neovim/nvim-lspconfig', dependencies = {
