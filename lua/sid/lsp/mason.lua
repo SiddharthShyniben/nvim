@@ -6,7 +6,7 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 -- TODO: HTML, CSS, JS, Rust, Node.js, Angular, Svelte, tsserver
 local servers = {
 	-- brew install lua-language-server
-	lua_ls = require 'lua.sid.lsp.configs.lua',
+	lua_ls = require 'sid.lsp.configs.lua_ls',
 }
 
 local function on_attach(client, bufnr)
