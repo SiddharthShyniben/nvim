@@ -25,7 +25,8 @@ require('lazy').setup({
 	-- Util
 	{'rmagatti/auto-session', config = function() require("auto-session").setup {
 		log_level = "error",
-		auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+		auto_session_suppress_dirs = {"~/"},
+		auto_session_allowed_dirs = {"~/Sites/"},
 	} end},
 	'jghauser/mkdir.nvim',
 
