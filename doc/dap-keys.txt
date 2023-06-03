@@ -1,0 +1,23 @@
+*dap-keys.txt* Keymaps for debugging
+
+Mappings:
+	<F5>                                  *dap-F5*
+		Continue
+		
+	<F7>                                  *dap-F7*
+		See last session output
+
+	<F1>                                  *dap-F1*
+		Step Into
+
+	<F2>                                  *dap-F2*
+		Step Over
+
+	<F3>                                  *dap-F3*
+		Step Out
+
+	*<leader>*b                             *leader-b*
+		Toggle breakpoint
+
+	*<leader>*B                             *leader-B*
+		Toggle conditional breakpoint

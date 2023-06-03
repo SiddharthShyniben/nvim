@@ -1,4 +1,4 @@
-*treesitter-keys.lua* Keymaps for treesitter
+*treesitter-keys.txt* Keymaps for treesitter
 
 Mappings:
 	<C-Space>                             *CTRL-Space*

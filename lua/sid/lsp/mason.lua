@@ -7,6 +7,8 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local servers = {
 	-- brew install lua-language-server
 	lua_ls = require 'sid.lsp.configs.lua_ls',
+	rust_analyzer = {},
+	svelte = {},
 }
 
 local function on_attach(client, bufnr)
@@ -40,4 +42,12 @@ require('typescript').setup({
     server = {
         on_attach = on_attach,
     },
+})
+
+local rt = require'rust-tools'
+
+rt.setup({
+	server = {
+		on_attach = on_attach,
+	},
 })

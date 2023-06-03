@@ -6,6 +6,8 @@ require('lazy').setup({
 		config = function() vim.cmd([[colorscheme tokyonight-night]]) end,
 	},
 
+	'nvim-lua/plenary.nvim',
+
 	-- Ergonomics
 	'tpope/vim-sensible',
 	'tpope/vim-surround',
@@ -14,16 +16,24 @@ require('lazy').setup({
 	'tpope/vim-sleuth',
 	'tpope/vim-speeddating',
 	{'max397574/better-escape.nvim', config = function() require('better_escape').setup() end},
-	{'ggandor/leap.nvim', config = function() require('leap').add_default_mappings() end},
+	{'ggandor/leap.nvim', config = function() require('leap').add_default_mappings() end, lazy = true},
 	{'chrisgrieser/nvim-spider', lazy = true},
 	'notomo/gesture.nvim',
 	{'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup {} end},
+	{'numToStr/Comment.nvim', config = function() require('Comment').setup() end},
+
+	-- Util
+	{'rmagatti/auto-session', config = function() require("auto-session").setup {
+		log_level = "error",
+		auto_session_suppress_dirs = { "~/", "~/Projects", "~/Downloads", "/"},
+	} end},
+	'jghauser/mkdir.nvim',
 
 	-- LSP
 	{'neovim/nvim-lspconfig', dependencies = {
 		{'williamboman/mason.nvim', build = ':MasonUpdate'},
 		'williamboman/mason-lspconfig.nvim',
-		
+
 		'saadparwaiz1/cmp_luasnip',
 		{'L3MON4D3/LuaSnip', dependencies = {'rafamadriz/friendly-snippets'}},
 
@@ -37,12 +47,16 @@ require('lazy').setup({
 
 		'folke/neodev.nvim',
 		'jose-elias-alvarez/typescript.nvim',
+		'simrat39/rust-tools.nvim',
+
+		-- Debugging (TODO)
+		{'mfussenegger/nvim-dap', dependencies = {'rcarriga/nvim-dap-ui', 'jay-babu/mason-nvim-dap.nvim'}},
 
 		-- UI
 		{'j-hui/fidget.nvim', config = function() require'fidget'.setup({text = {spinner = 'meter'}}) end},
 
 		{
-			'nvimdhabamaxev/lspsaga.nvim',
+			'nvimdev/lspsaga.nvim',
 			event = 'LspAttach',
 			config = function()
 				require('lspsaga').setup({
@@ -70,4 +84,39 @@ require('lazy').setup({
 			})
 		end}
 	}},
+
+	-- UI
+	{'nvim-telescope/telescope.nvim', tag = '0.1.1', dependencies = {'nvim-lua/plenary.nvim'}},
+	{'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}, config = function() require'lualine'.setup({options = {theme = 'tokyonight'}}) end},
+	-- {'mawkler/modicator.nvim', dependencies = {'folke/tokyonight.nvim'}, config = function()
+	-- 	local modicator = require('modicator');
+	-- 	modicator.setup({
+	-- 		modes = {
+	-- 			['n'] = {
+	-- 				foreground = '#7aa2f7',
+	-- 			},
+	-- 			['i']  = {
+	-- 				foreground = '#9ece6a',
+	-- 			},
+	-- 			['v']  = {
+	-- 				foreground = '#bb9af7',
+	-- 			},
+	-- 			['V']  = {
+	-- 				foreground = '#bb9af7',
+	-- 			},
+	-- 			['�'] = { -- This symbol is the ^V character
+	-- 				foreground = '#bb9af7',
+	-- 			},
+	-- 			['R']  = {
+	-- 				foreground = '#f7768e',
+	-- 			},
+	-- 			['c']  = {
+	-- 				foreground = '#e0af68'
+	-- 			},
+	-- 		},
+	-- 	})
+	-- end},
+
+	-- Fun
+	{'eandrju/cellular-automaton.nvim', lazy = true},
 }, {install = {colorscheme = {'tokyonight-night'}}})
