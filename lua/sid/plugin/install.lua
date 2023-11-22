@@ -21,6 +21,7 @@ require('lazy').setup({
 	'notomo/gesture.nvim',
 	{'windwp/nvim-autopairs', config = function() require('nvim-autopairs').setup {} end},
 	{'numToStr/Comment.nvim', config = function() require('Comment').setup() end},
+	{'echasnovski/mini.align', version = '*', config = function() require('mini.align').setup() end},
 
 	-- Util
 	{'rmagatti/auto-session', config = function() require("auto-session").setup {
@@ -29,6 +30,8 @@ require('lazy').setup({
 		auto_session_allowed_dirs = {"~/Sites/"},
 	} end},
 	'jghauser/mkdir.nvim',
+	'hjson/vim-hjson',
+	'folke/zen-mode.nvim',
 
 	-- LSP
 	{'neovim/nvim-lspconfig', dependencies = {
@@ -78,11 +81,8 @@ require('lazy').setup({
 
 		{'ray-x/lsp_signature.nvim', config = function() require 'lsp_signature'.setup() end},
 		{'https://git.sr.ht/~whynothugo/lsp_lines.nvim', config = function() require('lsp_lines').setup() end},
-		{'lukas-reineke/indent-blankline.nvim', config = function()
-			require 'indent_blankline'.setup({
-				show_current_context = true,
-				show_current_context_start = true,
-			})
+		{'lukas-reineke/indent-blankline.nvim', main = 'ibl', config = function()
+			require 'ibl'.setup()
 		end}
 	}},
 
